@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Secret env files
+**.env
+
+# VS code settings folder
+.vscode
