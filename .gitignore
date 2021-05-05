@@ -133,3 +133,9 @@ dmypy.json
 
 # VS code settings folder
 .vscode
+
+# Ignore node_modules
+node_modules/
+
+# Ignore media folder
+aracomp/media/post

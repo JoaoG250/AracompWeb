@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "sass": "sass ./assets/scss/style.scss:./assets/css/style.css --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.0.0-beta3"
+    "bootstrap": "^5.0.0-beta3",
+    "github-markdown-css": "^4.0.0",
+    "jquery": "^3.6.0",
+    "showdown": "^1.9.1"
   }
 }
