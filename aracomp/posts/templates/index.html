@@ -9,17 +9,33 @@
 
 
 {% block content %}
+<div class="welcome">
+    <div class="welcome-conteudo">
+        <img src="{% static 'assets/img/aracomp-art-inicio.svg' %}" alt="imagem-principal">
+        <h1>O <b>maior</b> evento <b>tecnológico</b> de Arapiraca<b class="piscar">_</b></h1>
+    </div>
+</div>
 
 {% for post in posts %}
-<div style="border: 2px solid; margin: 30px 10px;padding: 15px;">
-    <img src="{{ post.image.url }}" alt="Imagem do post" style="max-height: 300px;">
-    <h2>{{ post.get_post_type_display }}</h2>
-    <h3>{{ post.title }}</h3>
-    <h6>{{ post.created }}</h6>
-    <div class="markdown-body" style="display: none;">{{ post.description }}</div>
-    <button class="ver-mais-btn" data-target="#content-{{ post.id }}" style="margin: 10px 0;">Ver mais</button>
-    <div id="content-{{ post.id }}" class="content-wrapper" style="display: none;">
-        <div class="markdown-body" style="display: none;">{{ post.content }}</div>
+<div class="postagens">
+    <div class="postagens-conteudo">
+        <div class="linha"></div>
+        <div class="material">
+            <div class="imagem">
+                <img src="{{ post.image.url }}" alt="Imagem do post">
+            </div>
+            <div class="texto">
+                <h1>{{ post.get_post_type_display }}</h1>
+                <h2>{{ post.title }}</h2>
+                <div class="markdown-body" style="display: none;">{{ post.description }}</div>
+                <button class="ver-mais-btn" data-target="#content-{{ post.id }}">Ver
+                    mais</button>
+                <div id="content-{{ post.id }}" class="content-wrapper" style="display: none;">
+                    <div class="markdown-body" style="display: none;">{{ post.content }}</div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 {% endfor %}

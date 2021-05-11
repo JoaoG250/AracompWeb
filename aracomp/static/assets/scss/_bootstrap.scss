@@ -1,0 +1,19 @@
+// IMPORTACAO DO BOOTSTRAP E SOBRESCRITA
+@use 'global'as *;
+
+$primary: $cor-primaria;
+$secondary: $cor-secundaria;
+$success: $cor-sucesso;
+$danger: $cor-perigo;
+
+$font-size-root: null;
+$font-size-base: 1rem;
+
+$table-bg: transparent;
+
+$navbar-light-color: $cor-primaria;
+$navbar-light-hover-color: darken($cor-primaria, 5%);
+$navbar-light-active-color: darken($cor-primaria, 5%);
+$navbar-light-disabled-color: lighten($cor-primaria, 10%);
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+

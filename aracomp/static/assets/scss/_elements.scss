@@ -1,0 +1,29 @@
+// REGRAS DOS ELEMENTOS HTML
+@use 'global'as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+    background-color: $cor-secundaria;
+    font-family: $fonts-primaria;
+
+    color: $branco;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+header {
+    background-color: $cor-primaria;
+}

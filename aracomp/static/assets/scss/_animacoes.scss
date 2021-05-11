@@ -1,0 +1,10 @@
+@use 'global'as *;
+
+@keyframes piscar {
+    0% {
+        color: $cor-primaria;
+    }
+    100% {
+        color: transparent;
+    }
+}

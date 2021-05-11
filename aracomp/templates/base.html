@@ -8,16 +8,43 @@
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="icon" type="image/svg+xml" href="{% static 'assets/img/favicon.svg' %}">
     <link rel="alternate icon" href="{% static 'assets/img/favicon.ico' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     {% block head %}{% endblock head %}
     <title>{% block title %}{% endblock title %}</title>
 </head>
 
 <body>
     <main>
-        <h1 style="margin-left: 10px;">Postagens</h1>
+        <header class="container-header">
+            <div class="container-header__conteudo">
+                <section class="navbar-logo">
+                    <img src="{% static 'assets/img/logo-ARACOMP.png' %}" alt="logo" width="50px" height="50px">
+                </section>
+                <section class="navbar-home">
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Início</a>
+                        </div>
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Eventos</a>
+                        </div>
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Participações</a>
+                        </div>
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Caça ao tesouro</a>
+                        </div>
+                    </nav>
+                </section>
+            </div>
+        </header>
+        <!-- <h1 style="margin-left: 10px;">Postagens</h1> -->
         {% block content %}
         {% endblock content %}
     </main>
+    
     {% block footer %}
     {% endblock footer %}
 </body>

@@ -1,0 +1,152 @@
+@use 'global'as *;
+
+// HEADER
+
+.container-header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    &__conteudo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: $tamanho-site-desktop;
+    }
+}
+
+.navbar-home {
+    display: flex;
+    align-self: center;
+
+    .navbar {
+        display: flex;
+    }
+
+    .container-fluid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        white-space: nowrap;
+        .navbar-brand {
+            display: inline-block;
+            color: $branco;
+        }
+    }
+}
+
+// BODY
+
+b {
+    font-weight: 400;
+    color: $cor-primaria;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 4rem;
+
+    &-conteudo {
+        display: flex;
+        padding: 2rem;
+        width: $tamanho-site-desktop;
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 400;
+            margin-right: 3rem;
+            text-align: end;
+            align-self: center;
+        }
+    }
+    img {
+        width: 50rem;
+    }
+}
+
+.piscar {
+    animation-name: piscar;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+// POSTAGENS
+.postagens {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    &-conteudo {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.linha {
+    background-color: $cor-primaria;
+    width: $tamanho-site-desktop/2;
+    height: 3px;
+}
+
+.material {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+    width: $tamanho-site-desktop;
+
+    margin: 7rem 0 7rem 0;
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        width: 35rem;
+
+        button {
+            align-self: center;
+            border: solid 2px;
+            border-radius: 10rem;
+            border-color: $cor-primaria;
+            background-color: $cor-secundaria;
+            color: $branco;
+            margin: 3rem 0 3rem 0;
+
+            width: 15rem;
+            height: 3rem;
+        }
+    }
+
+    img {
+        width: 35rem;
+    }
+
+    h1 {
+        color: $cor-primaria;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    h2 {
+        color: $branco;
+        font-size: 2rem;
+        text-align: center;
+    }
+    ul,
+    ol {
+        color: $branco;
+    }
+    ul {
+        list-style-type: square;
+    }
+
+    p {
+        color: $branco;
+        font-size: 1.2rem;
+        text-align: justify;
+        text-indent: 4rem;
+    }
+}
