@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath aracomp aracomp.wsgi --log-file -

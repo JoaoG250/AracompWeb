@@ -1,0 +1,20 @@
+{
+  "name": "AracompWeb",
+  "version": "1.0.0",
+  "description": "Projeto da aplicação web para o Aracomp 2021 em Django",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd aracomp/static && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoG250/AracompWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoaoG250/AracompWeb/issues"
+  },
+  "homepage": "https://github.com/JoaoG250/AracompWeb#readme"
+}
