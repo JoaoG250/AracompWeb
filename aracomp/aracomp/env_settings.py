@@ -24,6 +24,7 @@ if get_env_value('ARACOMP_PRODUCTION') == 'FALSE':
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+    
 elif get_env_value('ARACOMP_PRODUCTION') == 'TRUE':
     DEBUG = False
     ALLOWED_HOSTS = ['https://aracomp.herokuapp.com']

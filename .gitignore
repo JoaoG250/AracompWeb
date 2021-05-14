@@ -139,3 +139,6 @@ node_modules/
 
 # Ignore media folder
 **/media/
+
+# Ignore enigmas json
+**/enigmas.json

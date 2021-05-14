@@ -6,9 +6,27 @@ $cor-secundaria: #0B080C;
 $branco: #F2F2F2;
 
 // TAMANHO DO SITE
-$tamanho-site-desktop: 100rem;
+$tamanho-site-desktop: 180rem;
+$tamanho-site-desktop-1600: 148rem;
+$tamanho-site-desktop-1366: 124.6rem;
+$tamanho-site-mobile-1080: 96rem;
+$tamanho-site-mobile-768: 62.8rem;
+
 
 
 // FONTE
 
 $fonts-primaria: 'Source Code Pro', monospace;
+
+
+html, body {
+    font-size: 62.5%;
+}
+
+body{
+    background: url('../img/background.png') center center no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

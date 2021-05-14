@@ -1,0 +1,24 @@
+{% extends 'base_enigma.html' %}
+{% load static %}
+
+{% block title %}Finalizado{% endblock title %}
+
+
+{% block content %}
+<h1 class="mb-2">Parabéns</h1>
+
+<h2 class="mb-4">Você completou todos os enigmas.</h2>
+
+<h4 class="mb-4">O vencedor da caça ao tesouro foi {{ vencedor.nome }}</h4>
+
+<div class="d-flex flex-column">
+        <a class="mb-3" href="{% url 'home' %}">Voltar a página inicial</a>
+        <a class="mb-3" href="{% url 'enigmas-reset' %}">Repetir a caça</a>
+</div>
+{% endblock content %}
+
+{% block progress %}
+{% for resposta in respostas %}
+<li>{{ resposta }}</li>
+{% endfor %}
+{% endblock progress %}

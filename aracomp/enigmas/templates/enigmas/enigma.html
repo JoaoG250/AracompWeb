@@ -1,0 +1,26 @@
+{% extends 'base_enigma.html' %}
+{% load static %}
+
+{% block title %}{{ enigma.pagina }}{% endblock title %}
+
+
+{% block content %}
+<h1>{{ enigma.pergunta }}</h1>
+<img src="{{ enigma.get_img_uri }}" alt="{{ enigma.pergunta }}">
+<form method="POST">
+    {% csrf_token %}
+    {{ form.resposta }}
+    {% for error in form.resposta.errors %}
+    <div class="form-error">
+        <strong>{{ error|escape }}</strong>
+    </div>
+    {% endfor %}
+    <input type="submit" class="enviar-btn" value="Enviar Resposta">
+</form>
+{% endblock content %}
+
+{% block progress %}
+{% for resposta in respostas %}
+<li>{{ resposta }}</li>
+{% endfor %}
+{% endblock progress %}

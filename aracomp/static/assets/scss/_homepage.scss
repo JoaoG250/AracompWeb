@@ -5,7 +5,7 @@
 .container-header {
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding: 2rem;
 
     &__conteudo {
         display: flex;
@@ -33,6 +33,16 @@
             display: inline-block;
             color: $branco;
         }
+
+        a {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 0 2rem 0 2rem;
+        }
+
+        .navbar-brand:hover {
+            color: darken($color: $branco, $amount: 15);
+        }
     }
 }
 
@@ -47,23 +57,25 @@ b {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 
     &-conteudo {
         display: flex;
-        padding: 2rem;
+        justify-content: space-between;
+        padding: 2rem 0 2rem 0;
         width: $tamanho-site-desktop;
 
         h1 {
-            font-size: 5rem;
+            font-size: 10rem;
             font-weight: 400;
-            margin-right: 3rem;
+            margin-right: 5rem;
             text-align: end;
             align-self: center;
+            width: 85rem;
         }
     }
     img {
-        width: 50rem;
+        width: 85rem;
     }
 }
 
@@ -104,40 +116,44 @@ b {
     .texto {
         display: flex;
         flex-direction: column;
-        width: 35rem;
+        width: 85rem;
 
         button {
             align-self: center;
-            border: solid 2px;
+            border: solid 3px;
             border-radius: 10rem;
             border-color: $cor-primaria;
             background-color: $cor-secundaria;
             color: $branco;
             margin: 3rem 0 3rem 0;
 
-            width: 15rem;
-            height: 3rem;
+            width: 30rem;
+            height: 6rem;
+
+            font-size: 2.2rem;
+            font-weight: 600;
         }
     }
 
     img {
-        width: 35rem;
+        width: 70rem;
     }
 
     h1 {
         color: $cor-primaria;
-        font-size: 4rem;
+        font-size: 8rem;
         text-align: center;
     }
 
     h2 {
         color: $branco;
-        font-size: 2rem;
+        font-size: 4rem;
         text-align: center;
     }
     ul,
     ol {
         color: $branco;
+        font-size: 2.4rem;
     }
     ul {
         list-style-type: square;
@@ -145,8 +161,275 @@ b {
 
     p {
         color: $branco;
-        font-size: 1.2rem;
+        font-size: 2.4rem;
         text-align: justify;
         text-indent: 4rem;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    // HEADER
+
+    .container-header {
+        &__conteudo {
+            width: $tamanho-site-desktop-1600;
+        }
+    }
+
+    // BODY
+
+    .welcome {
+        margin-bottom: 6rem;
+
+        &-conteudo {
+            padding: 1.8rem 0 1.8rem 0;
+            width: $tamanho-site-desktop-1600;
+
+            h1 {
+                font-size: 7rem;
+                width: 65rem;
+            }
+        }
+        img {
+            width: 65rem;
+        }
+    }
+
+    // POSTAGENS
+
+    .material {
+        width: $tamanho-site-desktop-1600;
+
+        .texto {
+            width: 75rem;
+
+            button {
+                border-radius: 10rem;
+                width: 30rem;
+                height: 6rem;
+
+                font-size: 2.2rem;
+            }
+        }
+
+        img {
+            width: 60rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    // HEADER
+
+    .container-header {
+        &__conteudo {
+            width: $tamanho-site-desktop-1366;
+        }
+    }
+
+    // BODY
+
+    .welcome {
+        margin-bottom: 6rem;
+
+        &-conteudo {
+            padding: 0;
+            width: $tamanho-site-desktop-1366;
+
+            h1 {
+                font-size: 6.5rem;
+                width: 62rem;
+            }
+        }
+        img {
+            width: 62rem;
+        }
+    }
+
+    // POSTAGENS
+
+    .material {
+        width: $tamanho-site-desktop-1366;
+
+        .texto {
+            width: 55rem;
+
+            button {
+                width: 25rem;
+            }
+        }
+
+        img {
+            width: 55rem;
+        }
+
+        h1 {
+            font-size: 7rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+        ul,
+        ol {
+            color: $branco;
+            font-size: 2rem;
+        }
+
+        p {
+            color: $branco;
+            font-size: 2.1rem;
+            text-align: justify;
+            text-indent: 4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    // HEADER
+
+    .container-header {
+        &__conteudo {
+            width: $tamanho-site-mobile-1080;
+        }
+    }
+
+    // BODY
+
+    .welcome {
+        justify-content: center;
+        align-items: center;
+        margin: 10rem 0 10rem 0;
+
+        &-conteudo {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+            padding: 0;
+            width: $tamanho-site-mobile-1080;
+
+            h1 {
+                padding: 10rem 0 10rem 0;
+                text-align: center;
+                font-size: 6.5rem;
+                width: 90rem;
+                margin: 0;
+                font-size: 10rem;
+            }
+        }
+        img {
+            width: 90rem;
+            padding: 10rem 0 10rem 0;
+        }
+    }
+
+    // POSTAGENS
+
+    .material {
+        flex-direction: column;
+        align-items: center;
+        width: $tamanho-site-mobile-1080;
+
+        .texto {
+            width: 85rem;
+
+            button {
+                width: 35rem;
+                height: 7rem;
+                font-size: 4rem;
+            }
+        }
+
+        img {
+            width: 70rem;
+        }
+        h1 {
+            font-size: 10rem;
+        }
+    
+        h2 {
+            font-size: 7rem;
+        }
+        ul,
+        ol {
+            font-size: 3.4rem;
+        }
+    
+        p {
+            color: $branco;
+            font-size: 3.4rem;
+            text-indent: 6rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    // HEADER
+
+    .container-header {
+        &__conteudo {
+            width: $tamanho-site-mobile-768;
+        }
+    }
+
+    // BODY
+
+    .welcome {
+        margin: 7rem 0 7rem 0;
+
+        &-conteudo {
+            width: $tamanho-site-mobile-768;
+
+            h1 {
+                width: 60rem;
+                font-size: 6rem;
+            }
+        }
+        img {
+            width: 60rem;
+            padding: 7rem 0 7rem 0;
+        }
+    }
+
+    // POSTAGENS
+
+    .linha {
+        width: 60rem;
+    }
+
+    .material {
+        width: $tamanho-site-mobile-768;
+
+        .texto {
+            width: 60rem;
+
+            button {
+                width: 25rem;
+                height: 6rem;
+                font-size: 3rem;
+                margin: 5rem 0 5rem 0;
+            }
+        }
+
+        img {
+            width: 70rem;
+        }
+        h1 {
+            font-size: 10rem;
+        }
+    
+        h2 {
+            font-size: 7rem;
+        }
+        ul,
+        ol {
+            font-size: 3.4rem;
+        }
+    
+        p {
+            color: $branco;
+            font-size: 3.4rem;
+            text-indent: 6rem;
+        }
     }
 }
