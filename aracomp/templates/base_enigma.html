@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    {% block head %}{% endblock head %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+    <main class="container">
+        <div class="enigmas_wrapper">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if vencedor %}
+            <h5>A caça ao tesouro já acabou. O vencedor foi {{ vencedor.nome }}.</h5>
+            <p>Mas você pode continuar tentando terminá-la.</p>
+            {% endif %}
+
+            <div class="row mb-4">
+
+                <div class="col-md-12 col-lg-6">
+                    <div class="card">
+                        {% block content %}
+                        {% endblock content %}
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-6">
+                    <div class="card">
+                        <ol>
+                            {% block progress %}
+                            {% endblock progress %}
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="{% url 'enigmas-reset' %}">Voltar ao primeiro enigma (reiniciar progresso)</a>
+
+        </div>
+    </main>
+</body>
+
+</html>

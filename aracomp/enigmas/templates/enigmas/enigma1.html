@@ -1,0 +1,28 @@
+{% extends 'base_enigma.html' %}
+{% load static %}
+
+{% block title %}(45.1,7.7){% endblock title %}
+
+
+{% block content %}
+<h1>Quem sou?</h1>
+<img src="{% static 'assets/img/enigma1.png' %}" alt="Quem sou?">
+<form method="POST">
+    {% csrf_token %}
+    {{ form.resposta }}
+    {% for error in form.resposta.errors %}
+    <div class="form-error">
+        <strong>{{ error|escape }}</strong>
+    </div>
+    {% endfor %}
+    <input type="submit" class="enviar-btn" value="Enviar Resposta">
+</form>
+{% endblock content %}
+
+{% block progress %}
+<li>????</li>
+<li>????</li>
+<li>????</li>
+<li>????</li>
+<li>????</li>
+{% endblock progress %}

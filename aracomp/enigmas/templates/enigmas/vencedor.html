@@ -1,0 +1,31 @@
+{% extends 'base_enigma.html' %}
+{% load static %}
+
+{% block title %}Vencedor!{% endblock title %}
+
+
+{% block content %}
+<h1 class="mb-2">Parabéns</h1>
+<p class="mb-4">Você venceu a caça ao tesouro. <br> Preencha o formulário para que possamos registrar a sua vitória.</p>
+<form method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="mb-2">
+        {{ field.label_tag }}
+        {{ field }}
+        {% for error in field.errors %}
+        <div class="form-error">
+            <strong>{{ error|escape }}</strong>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    <input type="submit" class="enviar-btn" value="Enviar">
+</form>
+{% endblock content %}
+
+{% block progress %}
+{% for resposta in respostas %}
+<li>{{ resposta.resposta }}</li>
+{% endfor %}
+{% endblock progress %}
