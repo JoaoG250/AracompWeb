@@ -433,3 +433,75 @@ b {
         }
     }
 }
+
+@media only screen and (max-width: 360px) {
+    // HEADER
+
+    .container-header {
+        &__conteudo {
+            width: $tamanho-site-mobile-360;
+        }
+    }
+
+    // BODY
+
+    .welcome {
+        margin: 2rem 0 2rem 0;
+
+        &-conteudo {
+            width: $tamanho-site-mobile-360;
+
+            h1 {
+                width: 30rem;
+                font-size: 3rem;
+                padding: 5rem 0 5rem 0;
+            }
+        }
+        img {
+            width: 30rem;
+            padding: 5rem 0 6rem 0;
+        }
+    }
+
+    // POSTAGENS
+
+    .linha {
+        width: 28rem;
+    }
+
+    .material {
+        width: $tamanho-site-mobile-360;
+
+        .texto {
+            width: 30rem;
+
+            button {
+                width: 12.5rem;
+                height: 3rem;
+                font-size: 1.5rem;
+                margin: 4rem 0 4rem 0;
+            }
+        }
+
+        img {
+            width: 35rem;
+        }
+        h1 {
+            font-size: 5rem;
+        }
+    
+        h2 {
+            font-size: 3.5rem;
+        }
+        ul,
+        ol {
+            font-size: 1.7rem;
+        }
+    
+        p {
+            color: $branco;
+            font-size: 1.7rem;
+            text-indent: 6rem;
+        }
+    }
+}
