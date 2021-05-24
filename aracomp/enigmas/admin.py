@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from enigmas.models import VencedorEnigmas, RespostaEnigma
+from enigmas.models import VencedorEnigmas, Enigma
 
 
-class RespostaEnigmaAdmin(admin.ModelAdmin):
+class EnigmaAdmin(admin.ModelAdmin):
     pass
 
 
@@ -11,5 +11,5 @@ class VencedorEnigmasAdmin(admin.ModelAdmin):
     pass
 
 
-admin.site.register(RespostaEnigma, RespostaEnigmaAdmin)
+admin.site.register(Enigma, EnigmaAdmin)
 admin.site.register(VencedorEnigmas, VencedorEnigmasAdmin)

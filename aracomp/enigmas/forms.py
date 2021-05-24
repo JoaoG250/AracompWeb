@@ -3,9 +3,13 @@ from django import forms
 from enigmas.models import VencedorEnigmas
 
 
-class EnigmaForm(forms.Form):
+class RespostaEnigmaForm(forms.Form):
     resposta = forms.CharField(max_length=100, widget=forms.TextInput(
         attrs={'class': 'enigma-input'}))
+
+    def save(self, commit=True):
+        enigma = super(EnigmaVencedorForm, self).save(commit=False)
+        return enigma
 
 
 class EnigmaVencedorForm(forms.ModelForm):
