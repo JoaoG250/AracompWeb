@@ -46,6 +46,26 @@
     }
 }
 
+.inscrever {
+    border: solid 3px;
+    border-radius: 10rem;
+
+    padding: 0;
+
+    .navbar-brand {
+        text-align: center;
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        margin: 0 !important;
+        padding: 0 2rem 0 2rem;
+    }
+}
+.inscrever:hover {
+    border-color: darken($color: $branco, $amount: 15);
+}
+
 // BODY
 
 b {
@@ -346,7 +366,7 @@ b {
         h1 {
             font-size: 10rem;
         }
-    
+
         h2 {
             font-size: 7rem;
         }
@@ -354,7 +374,7 @@ b {
         ol {
             font-size: 3.4rem;
         }
-    
+
         p {
             color: $branco;
             font-size: 3.4rem;
@@ -417,7 +437,7 @@ b {
         h1 {
             font-size: 10rem;
         }
-    
+
         h2 {
             font-size: 7rem;
         }
@@ -425,7 +445,7 @@ b {
         ol {
             font-size: 3.4rem;
         }
-    
+
         p {
             color: $branco;
             font-size: 3.4rem;
@@ -434,7 +454,7 @@ b {
     }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 480px) {
     // HEADER
 
     .container-header {
@@ -489,7 +509,7 @@ b {
         h1 {
             font-size: 5rem;
         }
-    
+
         h2 {
             font-size: 3.5rem;
         }
@@ -497,7 +517,7 @@ b {
         ol {
             font-size: 1.7rem;
         }
-    
+
         p {
             color: $branco;
             font-size: 1.7rem;
