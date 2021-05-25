@@ -2,9 +2,23 @@
 
 // HEADER
 
+.control-nav,
+.control-nav-close,
+.checkbox {
+    display: none;
+}
+
 .container-header {
     display: flex;
     justify-content: center;
+
+    min-height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+
     padding: 2rem;
 
     &__conteudo {
@@ -17,10 +31,19 @@
 
 .navbar-home {
     display: flex;
-    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
 
     .navbar {
         display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-pai {
+        z-index: 4;
     }
 
     .container-fluid {
@@ -30,7 +53,6 @@
 
         white-space: nowrap;
         .navbar-brand {
-            display: inline-block;
             color: $branco;
         }
 
@@ -52,9 +74,16 @@
 
     padding: 0;
 
+    width: 16rem;
+    height: 4rem;
+
+    margin: 0;
+
     .navbar-brand {
         text-align: center;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100%;
         width: 100%;
         text-decoration: none;
@@ -78,7 +107,7 @@ b {
     justify-content: center;
     width: 100%;
     margin-bottom: 6rem;
-
+    margin-top: 10rem;
     &-conteudo {
         display: flex;
         justify-content: space-between;
@@ -383,13 +412,110 @@ b {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     // HEADER
 
+    .navbar-logo {
+        order: 1;
+    }
+
+    .inscrever {
+        order: 2;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0 1rem 0 !important;
+
+        .container-fluid {
+            border-top: solid 2px darken($color: $cor-primaria, $amount: 12);
+            padding: 0;
+            .navbar-brand {
+                padding: 0;
+                text-align: center;
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 5rem;
+                width: 100%;
+                margin: 0 !important;
+                padding: 0 2rem 0 2rem;
+            }
+        }
+        .container-fluid:last-child {
+            border-bottom: solid 2px darken($color: $cor-primaria, $amount: 12);
+        }
+    }
     .container-header {
+        .control-nav {
+            position: relative;
+            display: block;
+            width: 30px;
+            padding: 5px 0;
+            border: solid $branco;
+            border-width: 3px 0;
+            z-index: 2;
+            cursor: pointer;
+
+            order: 3;
+        }
+
+        .control-nav:before {
+            content: "";
+            display: block;
+            height: 3px;
+            background: $branco;
+        }
+
+        .control-nav-close {
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            z-index: 1;
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+            -webkit-transform: translate(100%, 0);
+            -ms-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 250px;
+            border-left: 1px solid darken($color: $cor-primaria, $amount: 8);
+            background: $cor-primaria;
+            overflow-x: auto;
+            z-index: 2;
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+            -webkit-transform: translate(100%, 0);
+            -ms-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+        }
+
         &__conteudo {
             width: $tamanho-site-mobile-768;
         }
+    }
+
+    #control-nav:checked ~ .control-nav-close {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    #control-nav:checked ~ nav {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 
     // BODY

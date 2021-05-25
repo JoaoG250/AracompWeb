@@ -5,8 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/svg+xml" href="{% static 'assets/img/favicon.ico' %}">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     {% block head %}{% endblock head %}
@@ -17,23 +20,30 @@
     <main>
         <header class="container-header">
             <div class="container-header__conteudo">
-                <section class="navbar-logo">
-                    <img src="{% static 'assets/img/logo.png' %}" alt="logo" width="50px" height="50px">
-                </section>
+
                 <section class="navbar-home">
-                    <nav class="navbar">
-                        <div class="container-fluid">
-                            <a class="navbar-brand ml-3 mr-3" href="#">Início</a>
-                        </div>
-                        <div class="container-fluid ml-3 mr-3">
-                            <a class="navbar-brand" href="#">Participações</a>
-                        </div>
-                        <div class="container-fluid ml-3 mr-3">
-                            <a class="navbar-brand" href="#">Cronograma</a>
-                        </div>
+                    <div class="navbar-logo">
+                        <img src="{% static 'assets/img/logo.png' %}" alt="logo" width="50px" height="50px">
+                    </div>
+                    <input type="checkbox" id="control-nav" style="display: none;" />
+                    <label for="control-nav" class="control-nav"></label>
+                    <label for="control-nav" class="control-nav-close"></label>
+                    <nav class="fR navbar-pai">
+                        <ul class="l2 navbar">
+                            <li class="container-fluid">
+                                <a class="navbar-brand ml-3 mr-3" href="#">Início</a>
+                            </li>
+                            <li class="container-fluid">
+                                <a class="navbar-brand" href="#">Participações</a>
+                            </li>
+                            <li class="container-fluid">
+                                <a class="navbar-brand" href="#">Cronograma</a>
+                            </li>
+                        </ul>
                     </nav>
                     <div class="container-fluid inscrever ml-3 mr-3">
-                        <a class="navbar-brand" href="https://doity.com.br/aracomponline" target="_blank">Insvreva-se</a>
+                        <a class="navbar-brand" href="https://doity.com.br/aracomponline"
+                            target="_blank">Insvreva-se</a>
                     </div>
                 </section>
             </div>
@@ -41,7 +51,7 @@
         {% block content %}
         {% endblock content %}
     </main>
-    
+
     {% block footer %}
     {% endblock footer %}
 </body>
