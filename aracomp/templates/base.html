@@ -23,7 +23,9 @@
 
                 <section class="navbar-home">
                     <div class="navbar-logo">
-                        <img src="{% static 'assets/img/logo.png' %}" alt="logo" width="50px" height="50px">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'assets/img/logo.png' %}" alt="logo">
+                        </a>
                     </div>
                     <input type="checkbox" id="control-nav" style="display: none;" />
                     <label for="control-nav" class="control-nav"></label>
@@ -31,7 +33,7 @@
                     <nav class="fR navbar-pai">
                         <ul class="l2 navbar">
                             <li class="container-fluid">
-                                <a class="navbar-brand ml-3 mr-3" href="#">Início</a>
+                                <a class="navbar-brand ml-3 mr-3" href="{% url 'home' %}">Início</a>
                             </li>
                             <li class="container-fluid">
                                 <a class="navbar-brand" href="#">Participações</a>

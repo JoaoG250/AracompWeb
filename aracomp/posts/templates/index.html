@@ -16,8 +16,8 @@
     </div>
 </div>
 
-{% for post in posts %}
 <div class="postagens">
+    {% for post in posts %}
     <div class="postagens-conteudo">
         <div class="linha"></div>
         <div class="material">
@@ -37,8 +37,9 @@
 
         </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
+
 
 {% endblock content %}
 

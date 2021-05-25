@@ -68,6 +68,14 @@
     }
 }
 
+
+.navbar-logo {
+    img {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
 .inscrever {
     border: solid 3px;
     border-radius: 10rem;
@@ -139,6 +147,7 @@ b {
     display: flex;
     width: 100%;
     justify-content: center;
+    flex-direction: column;
 
     &-conteudo {
         display: flex;
@@ -215,6 +224,14 @@ b {
         text-indent: 4rem;
     }
 }
+
+.postagens-conteudo:nth-child(2n) {
+    .material {
+        flex-direction: row;
+    }
+}
+
+// RESPONSIVIDADE
 
 @media only screen and (max-width: 1600px) {
     // HEADER
@@ -420,7 +437,13 @@ b {
     }
 
     .inscrever {
+        width: 12rem;
+        height: 3rem;
         order: 2;
+
+        a {
+            font-size: 1.3rem !important;
+        }
     }
 
     .navbar {
@@ -578,21 +601,36 @@ b {
             text-indent: 6rem;
         }
     }
+
+    .postagens-conteudo:nth-child(2n) {
+        .material {
+            flex-direction: column;
+        }
+    }
 }
 
 @media only screen and (max-width: 480px) {
     // HEADER
 
     .container-header {
+        padding: 1rem;
+
         &__conteudo {
             width: $tamanho-site-mobile-360;
+        }
+
+        .navbar-logo {
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
         }
     }
 
     // BODY
 
     .welcome {
-        margin: 2rem 0 2rem 0;
+        margin: 3rem 0 2rem 0;
 
         &-conteudo {
             width: $tamanho-site-mobile-360;
@@ -600,12 +638,12 @@ b {
             h1 {
                 width: 30rem;
                 font-size: 3rem;
-                padding: 5rem 0 5rem 0;
+                padding: 5rem 0 2rem 0;
             }
         }
         img {
             width: 30rem;
-            padding: 5rem 0 6rem 0;
+            padding: 2rem 0 4rem 0;
         }
     }
 
