@@ -3,6 +3,7 @@ from django.db import models
 from django.templatetags.static import static
 from django.contrib.staticfiles import finders
 from django.utils.crypto import get_random_string
+from django.core.exceptions import SuspiciousOperation
 
 
 class Post(models.Model):
@@ -23,9 +24,13 @@ class Post(models.Model):
         verbose_name_plural = 'Postagens'
 
     def save(self, *args, **kwargs):
-        if finders.find(self.image):
-            self.image = static(self.image)
-        else:
+        self.image = self.image.replace('/static/', '')
+        try:
+            if finders.find(self.image):
+                self.image = static(self.image)
+            else:
+                self.image = static('posts/default/post_image.png')
+        except SuspiciousOperation:
             self.image = static('posts/default/post_image.png')
         super(Post, self).save(*args, **kwargs)
 
