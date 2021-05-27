@@ -10,12 +10,14 @@ class Post(models.Model):
     OPTIONS_POST_TYPE = [
         ('P', 'Palestras'),
         ('H', 'Hackathon'),
-        ('M', 'Minicursos')
+        ('M', 'Minicursos'),
+        ('R', 'Mesas Redondas'),
+        ('A', 'Maratona')
     ]
     post_type = models.CharField('Tipo de Postagem', max_length=1, choices=OPTIONS_POST_TYPE)
     title = models.CharField('Título', max_length=120)
-    description = models.TextField('Descrição', max_length=500)
-    content = models.TextField('Conteúdo', max_length=1500)
+    description = models.TextField('Descrição', max_length=800)
+    content = models.TextField('Conteúdo', max_length=3000)
     image = models.CharField('Path da imagem em static', max_length=200)
     created = models.DateField('Data de Criação', auto_now_add=True)
 
