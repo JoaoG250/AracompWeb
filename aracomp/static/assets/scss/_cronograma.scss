@@ -1,0 +1,61 @@
+@use 'global'as *;
+
+.cronograma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10rem 5rem 10rem 5rem;
+    font-size: 250%;
+}
+
+.cronograma__tabela {
+    padding: 10rem 5rem 10rem 5rem;
+    // table {
+    //     background-color: darken($color: $branco, $amount: 50);
+    //     color: $cor-primaria;
+    // }
+    table,
+    tr,
+    td {
+        border: solid 3px $cor-primaria;
+        text-align: center;
+    }
+
+    .tabela-item {
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 1rem;
+    }
+
+    max-width: $tamanho-site-desktop-1200;
+}
+
+@media only screen and (max-width: 1200px) {
+    .cronograma__tabela {
+        padding: 7rem 3rem 7rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .cronograma {
+        justify-content: center;
+        align-items: center;
+        padding: 7.8rem 2rem 4rem 2rem;
+    }
+    .cronograma__tabela {
+        padding: 2rem 1rem 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .cronograma {
+        font-size: 220%;
+    }
+    .cronograma__tabela {
+        overflow-y: scroll;
+        min-width: 30rem;
+    }
+}

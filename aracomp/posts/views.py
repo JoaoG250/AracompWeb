@@ -1,8 +1,11 @@
 from django.shortcuts import render
-from django.views.generic.list import ListView
+from django.views.generic import ListView, TemplateView
 
 from posts.models import Post
 
+
+class CronogramaView(TemplateView):
+    template_name = 'cronograma.html'
 
 class PostsView(ListView):
     template_name = 'index.html'

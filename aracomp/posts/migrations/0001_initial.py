@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Post',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('post_type', models.CharField(choices=[('P', 'Palestra'), ('H', 'Hackaton'), ('M', 'Minicurso')], max_length=1, verbose_name='Tipo de Postagem')),
+                ('post_type', models.CharField(choices=[('P', 'Palestras'), ('H', 'Hackathon'), ('M', 'Minicursos')], max_length=1, verbose_name='Tipo de Postagem')),
                 ('title', models.CharField(max_length=120, verbose_name='Título')),
                 ('description', models.TextField(max_length=500, verbose_name='Descrição')),
                 ('content', models.TextField(max_length=1500, verbose_name='Conteúdo')),

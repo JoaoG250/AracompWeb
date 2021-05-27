@@ -25,7 +25,7 @@
                 <img src="{{ post.image }}" alt="Imagem do post">
             </div>
             <div class="texto">
-                <h1>{{ post.get_post_type_display }}</h1>
+                <h1 class="titulo-postagem">{{ post.get_post_type_display }}</h1>
                 <h2>{{ post.title }}</h2>
                 <div class="markdown-body" style="display: none;">{{ post.description }}</div>
                 <button class="ver-mais-btn" data-target="#content-{{ post.id }}">Ver

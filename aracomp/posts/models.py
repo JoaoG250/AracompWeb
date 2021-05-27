@@ -7,9 +7,9 @@ from django.utils.crypto import get_random_string
 
 class Post(models.Model):
     OPTIONS_POST_TYPE = [
-        ('P', 'Palestra'),
-        ('H', 'Hackaton'),
-        ('M', 'Minicurso')
+        ('P', 'Palestras'),
+        ('H', 'Hackathon'),
+        ('M', 'Minicursos')
     ]
     post_type = models.CharField('Tipo de Postagem', max_length=1, choices=OPTIONS_POST_TYPE)
     title = models.CharField('Título', max_length=120)
