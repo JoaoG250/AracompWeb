@@ -1,0 +1,401 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'node_modules/github-markdown-css/github-markdown.css' %}">
+{% endblock head %}
+
+{% block title %}Cronograma - Aracomp{% endblock title %}
+
+
+{% block content %}
+
+<div class="cronograma palestrantes">
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Palestra de Abertura_</h1>
+                <p>Dia <b>31/05</b> das 14h às 15h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Empreendedor, engenheiro, professor titular e pesquisador no Centro de Tecnologia da UFAL</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/01.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Eduardo Setton<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Palestra_</h1>
+                <h3><b>Criptomoedas e Smart Contracts</b></h3>
+                <p>Dia <b>31/05</b> das 16h às 17h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Desenvolvedor backend NodeJs pleno</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/15.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Paulo Abreu<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Apresentação_</h1>
+                <h3><b>CICA: Centro de Inovação Colaborativa de Arapiraca</b></h3>
+                <p>Dia <b>31/05</b> das 17h às 18h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Professor de Ciência da Computação / UFAL - Arapiraca</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/07.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Tácito Neves<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Oficina_</h1>
+                <h3><b>Construindo API's GraphQL com SpringBoot</b></h3>
+                <p>Dia <b>31/05</b> das 19h30 às 22h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Desenvolvedor backend e Pesquisador da UFAL</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/08.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Filipe Oliveira<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Mesa Redonda_</h1>
+                <h3><b>Desenvolvimento mobile: nativo vs cross-platform</b></h3>
+                <p>Dia <b>01/06</b> das 15h às 16h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Desenvolvedor mobile senior na Madewithlove</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/05.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Kaio Brito<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Mesa Redonda_</h1>
+                <h3><b>Desenvolvimento mobile: nativo vs cross-platform</b></h3>
+                <p>Dia <b>01/06</b> das 15h às 16h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Desenvolvedor mobile na Spotify/Soundtrap (Stockholm)</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/06.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Lucas Braz<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>BATE-PAPO_</h1>
+                <h3><b>Sobre tecnologia, negócios e inovação</b></h3>
+                <p>Dia <b>01/06</b> das 16h às 17h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Arquiteto de software, Professor, Autor, Palestrante e Youtuber!</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/10.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Rodrigo Branas<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Palestra_</h1>
+                <h3><b>Conhecendo tecnologias locais: a Polarsoft</b></h3>
+                <p>Dia <b>01/06</b> das 17h às 18h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>CEO da Polarsoft, mreste em Ciência da Computação, Desenvolvedor Full Stack</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/11.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Bruno Rafael<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Mesa redonda_</h1>
+                <h3><b>Empreender ou trabalhar em empresas de terceiros?</b></h3>
+                <p>Dia <b>31/05</b> das 15h às 16h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Professor do curso de Ciência da Computação</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/02.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Leandro de Sales<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+    
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Mesa redonda_</h1>
+                <h3><b>Empreender ou trabalhar em empresas de terceiros?</b></h3>
+                <p>Dia <b>31/05</b> das 15h às 16h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Desenvolvedor Front-End na HiggCo / Canadá/p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/03.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Gustavo Costa<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Mesa redonda_</h1>
+                <h3><b>Empreender ou trabalhar em empresas de terceiros?</b></h3>
+                <p>Dia <b>31/05</b> das 15h às 16h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Criador do plugin Fireblade/XD</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/04.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Fabrício Farias<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Oficina_</h1>
+                <h3><b>Conhecendo mais do ReactJS</b></h3>
+                <p>Dia <b>31/05</b> das 20h às 22h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Desenvolvedor Fullstack e Estudante de Ciência da Computação</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/12.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Mateus Cardoso<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Oficina_</h1>
+                <h3><b>CQRS (Command-Query Responsability Segregration) com NestJS</b></h3>
+                <p>Dia <b>01/06</b> das 19h30 às 22h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Desenvolvedor Fullstack na Gerencianet</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/09.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Marcos Piancó<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Oficina_</h1>
+                <h3><b>Data Science e Machine Learning</b></h3>
+                <p>Dia <b>01/06</b> das 19h às 22h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Doutor em Ciência da Computação e professor na UFAL - Arapiraca</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/13.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Rodolfo Carneiro<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Mesa Redonda_</h1>
+                <h3><b>Soft Skills em Tecnologia</b></h3>
+                <p>Dia <b>02/06</b> das 15h às 16h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Desenvolvedor Fullstack na Gerencianet</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/14.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Rodrigo Apolinário<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Palestra_</h1>
+                <h3><b>Criando design de interfaces e gerando código automático com AdobeXD e o plugin Fireblade</b></h3>
+                <p>Dia <b>02/06</b> das 16h às 17h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Criador do plugin Fireblade/XD</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/04.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Fabrício Farias<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Palestra_</h1>
+                <h3><b>Conhecendo a startup arapiraquense PedeAiVai</b></h3>
+                <p>Dia <b>02/06</b> das 17h às 18h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>CEO da PedeAiVai</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/16.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Luis Cláudio<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacoes_texto">
+            <div class="informacoes_texto_evento">
+                <h1>Palestra_</h1>
+                <h3><b>Conhecendo a startup arapiraquense PedeAiVai</b></h3>
+                <p>Dia <b>02/06</b> das 17h às 18h</p>
+            </div>
+            <div class="informacoes_texto_palestrante">
+                <p>Professor do curso de Ciência da Computação da UFAL - Arapiraca e Engenheiro de Software</p>
+            </div>
+        </div>
+        <div class="informacoes_perfil">
+            <div class="informacoes_perfil_foto">
+                <img src="{% static 'assets/img/palestrantes/17.png' %}" alt="">
+            </div>
+            <div class="informacoes_perfil_nome">
+                <b>•</b> Thiago de Sales<b class="piscar">_</b>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+{% endblock content %}
+
+
+{% block footer %}
+<script src="{% static 'node_modules/jquery/dist/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'node_modules/showdown/dist/showdown.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/posts.js' %}" type="text/javascript"></script>
+{% endblock footer %}

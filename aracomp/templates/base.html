@@ -27,16 +27,18 @@
                             <img src="{% static 'assets/img/logo.png' %}" alt="logo">
                         </a>
                     </div>
+
                     <input type="checkbox" id="control-nav" style="display: none;" />
                     <label for="control-nav" class="control-nav"></label>
                     <label for="control-nav" class="control-nav-close"></label>
+
                     <nav class="fR navbar-pai">
                         <ul class="l2 navbar">
                             <li class="container-fluid">
                                 <a class="navbar-brand ml-3 mr-3" href="{% url 'home' %}">Início</a>
                             </li>
                             <li class="container-fluid">
-                                <a class="navbar-brand" href="#">Palestrantes</a>
+                                <a class="navbar-brand" href="{% url 'palestrantes' %}">Palestrantes</a>
                             </li>
                             <li class="container-fluid">
                                 <a class="navbar-brand" href="{% url 'cronograma' %}">Cronograma</a>
@@ -52,6 +54,17 @@
         </header>
         {% block content %}
         {% endblock content %}
+
+        <footer class="footer">
+            <div class="container">
+                <img src="{% static 'assets/img/Brasao.png' %}" alt="logo">
+                <img src="{% static 'assets/img/PedeAiVai.png' %}" alt="logo">
+                <img src="{% static 'assets/img/logo-ARACOMP-2021.png' %}" alt="logo">
+            </div>
+            <!-- <div class="container container-p">
+                <p>© 2021 - Aracomp</p>
+            </div> -->
+        </footer>
     </main>
 
     {% block footer %}
