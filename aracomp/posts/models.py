@@ -12,7 +12,8 @@ class Post(models.Model):
         ('H', 'Hackathon'),
         ('M', 'Minicursos'),
         ('R', 'Mesas Redondas'),
-        ('A', 'Maratona')
+        ('A', 'Maratona'),
+        ('O', 'Oficinas')
     ]
     post_type = models.CharField('Tipo de Postagem', max_length=1, choices=OPTIONS_POST_TYPE)
     title = models.CharField('Título', max_length=120)
