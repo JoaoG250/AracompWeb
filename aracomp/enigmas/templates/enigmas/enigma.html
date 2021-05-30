@@ -10,7 +10,7 @@
     <img src="{{ enigma.get_img_uri }}" alt="{{ enigma.pergunta }}">
 </div>
 <div class="enigmas_resposta">
-    <form method="POST">
+    <form class="row m-0" method="POST">
         {% csrf_token %}
         {{ form.resposta }}
         {% for error in form.resposta.errors %}
