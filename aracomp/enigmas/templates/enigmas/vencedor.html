@@ -10,7 +10,7 @@
 <form method="POST">
     {% csrf_token %}
     {% for field in form %}
-    <div class="mb-2">
+    <div class="mb-4 row m-0">
         {{ field.label_tag }}
         {{ field }}
         {% for error in field.errors %}
@@ -20,7 +20,7 @@
         {% endfor %}
     </div>
     {% endfor %}
-    <input type="submit" class="enviar-btn" value="Enviar">
+    <input type="submit" class="enviar-btn w-100" value="Enviar">
 </form>
 {% endblock content %}
 

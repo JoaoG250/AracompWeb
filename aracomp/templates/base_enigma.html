@@ -14,9 +14,17 @@
 </head>
 
 <body>
-    <main class="enigmas">
-        <div class="enigmas_conteudo">
-            <div class="enigmas_messages">
+    <main class="container">
+        <div class="enigmas row">
+            <div class="enigmas_respostas">
+                <div class="enigmas_respostas--lista">
+                    <ol>
+                        {% block progress %}
+                        {% endblock progress %}
+                    </ol>
+                </div>
+            </div>
+            <div class="enigmas_conteudo col-sm-12 col-lg-7">
                 {% if messages %}
                 <ul class="enigmas_messages">
                     {% for message in messages %}
@@ -29,22 +37,14 @@
                 <h3>A caça ao <b>tesouro</b> já acabou. O vencedor foi <b>{{ vencedor.nome }}</b>.</h3>
                 <p>Mas você pode continuar tentando terminá-la<b class="piscar">_</b></p>
                 {% endif %}
-            </div>
 
-            <div class="enigmas_container">
-                {% block content %}
-                {% endblock content %}
-            </div>
-
-            <a href="{% url 'enigmas-reset' %}">Voltar ao primeiro enigma (reiniciar progresso)</a>
-        </div>
-        <div class="enigmas_respostas">
-                <div class="enigmas_respostas--lista">
-                    <ol>
-                        {% block progress %}
-                        {% endblock progress %}
-                    </ol>
+                <div class="enigmas_container">
+                    {% block content %}
+                    {% endblock content %}
                 </div>
+
+                <a href="{% url 'enigmas-reset' %}">Voltar ao primeiro enigma (reiniciar progresso)</a>
+            </div>
         </div>
     </main>
 </body>

@@ -14,6 +14,8 @@ body {
     height: 100%;
     overflow-x: hidden;
 
+    font-size: 62.5%;
+
     background-color: $cor-secundaria;
     font-family: $fonts-primaria;
 
@@ -24,6 +26,28 @@ body {
     }
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    background: url("../img/background.png") center center no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
 header {
     background-color: $cor-primaria;
+}
+
+footer {
+    margin-top: auto;
 }
