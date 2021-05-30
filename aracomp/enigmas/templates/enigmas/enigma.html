@@ -5,18 +5,23 @@
 
 
 {% block content %}
-<h1>{{ enigma.pergunta }}</h1>
-<img src="{{ enigma.get_img_uri }}" alt="{{ enigma.pergunta }}">
-<form method="POST">
-    {% csrf_token %}
-    {{ form.resposta }}
-    {% for error in form.resposta.errors %}
-    <div class="form-error">
-        <strong>{{ error|escape }}</strong>
-    </div>
-    {% endfor %}
-    <input type="submit" class="enviar-btn" value="Enviar Resposta">
-</form>
+<div class="enigmas_content">
+    <h1>{{ enigma.pergunta }}</h1>
+    <img src="{{ enigma.get_img_uri }}" alt="{{ enigma.pergunta }}">
+</div>
+<div class="enigmas_resposta">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.resposta }}
+        {% for error in form.resposta.errors %}
+        <div class="form-error">
+            <strong>{{ error|escape }}</strong>
+        </div>
+        {% endfor %}
+        <input type="submit" class="enviar-btn" value="Enviar Resposta">
+    </form>
+</div>
+
 {% endblock content %}
 
 {% block progress %}
