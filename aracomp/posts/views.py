@@ -3,6 +3,8 @@ from django.views.generic import ListView, TemplateView
 
 from posts.models import Post
 
+class PalestrantesView(TemplateView):
+    template_name = 'palestrantes.html'
 
 class CronogramaView(TemplateView):
     template_name = 'cronograma.html'

@@ -1,0 +1,125 @@
+@use 'global'as *;
+
+$tamanho-componente: 30rem;
+
+.palestrantes {
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: $tamanho-componente;
+
+    margin: 5rem 0 0rem 0;
+
+    b {
+        font-weight: 600;
+        color: $cor-primaria;
+    }
+
+    &_texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        width: $tamanho-componente * 1.5;
+
+        padding: 0 5rem 0 0;
+
+        &_evento {
+            h1 {
+                color: $branco;
+                font-size: 250%;
+                margin: 0 0 1rem 0;
+            }
+
+            h3 {
+                margin: 0 0 1rem 0;
+            }
+
+            p {
+                background-color: lighten($color: #000000, $amount: 20);
+
+                text-align: center;
+
+                width: 25rem;
+
+                border-radius: 5rem;
+            }
+        }
+    }
+
+    &_perfil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &_foto {
+            position: relative;
+            width: $tamanho-componente * 0.8;
+            height: $tamanho-componente * 0.8;
+            // padding-bottom: 10rem;
+            border-radius: 50%;
+            border: 5px solid $cor-primaria;
+            margin-bottom: 2rem;
+
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .informacoes {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px) {
+    .informacoes {
+        width: 100%;
+        max-width: 50rem;
+        margin: 1rem 0 0rem 0;
+        
+        &_texto {
+            min-width: $tamanho-componente * 0.5;
+            max-width: $tamanho-componente;
+            padding: 0 1rem 0 0;
+
+            &_evento {
+                h1 {
+                    font-size: 150%;
+                }
+
+                p {
+                    width: 15rem;
+                    font-size: 92%;
+                }
+            }
+        }
+
+        &_perfil {
+            &_foto {
+                width: $tamanho-componente * 0.5;
+                height: $tamanho-componente * 0.5;
+            }
+
+            &_nome {
+                font-size: 120%;
+            }
+        }
+    }
+}
