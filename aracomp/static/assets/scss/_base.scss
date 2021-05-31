@@ -75,6 +75,22 @@
     }
 }
 
+.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: row-reverse;
+}
+
+.aracomp-youtube {
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+
+    margin: 0 3rem 0 3rem;
+}
+
 .inscrever {
     border: solid 3px;
     border-radius: 10rem;
@@ -140,7 +156,7 @@
         background-color: darken($color: $cor-primaria, $amount: 15);
 
         p {
-            margin: .5rem;
+            margin: 0.5rem;
         }
     }
 }
@@ -192,10 +208,28 @@
         order: 1;
     }
 
+    .media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        flex-direction: row-reverse;
+
+        order: 2;
+
+    }
+    
+    .aracomp-youtube {
+        display: flex;
+        height: 3rem;
+        width: 3rem;
+    
+        margin: 0 3rem 0 3rem;
+    }
+
     .inscrever {
         width: 12rem;
         height: 3rem;
-        order: 2;
 
         a {
             font-size: 1.3rem !important;
